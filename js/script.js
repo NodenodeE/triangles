@@ -1,35 +1,37 @@
-// `Triangle One has an area of xx cm2 and 
-// Triangle Two has an areaof xx cm2. 
-// The triangle with the biggest area is Triangle xx.`
+let baseOne = "13";
+let heightOne = "15";
+let areaOne = `Triangle one area is ${(baseOne * heightOne)* (1/2)} cm2.`
 
-///////////////// variables
+let baseTwo = "16.5";
+let heightTwo = "20.3";
+let areaTwo = `Triangle two area is ${(baseTwo * heightTwo)* (1/2)} cm2.`
 
-var one = "Triangle One";
-var two = "Triangle two";
-var areaOne = area(15, 13);
-var areaTwo = area(16.5, 20.3);
+const diffOne = `The triangle with the biggest area is ${ areaTwo < areaOne ? 'Triangle One' : ''} ${ areaTwo > areaOne ? 'Triangle Two' : ''}.`
 
-var three = "Triangle Three";
-var four = "Triangle Four";
-// area three and four has the same value as areaTwo
+let areaThreeFour = `Triangle three and four has the same area of ${(baseTwo * heightTwo)* (1/2)} cm2`
 
-var five = "Triangle Five";
-var six = "Triangle Six";
-var areaFive = area(7.8, 5.6);
-var areaSix = area(9.3, 12.4);
+const diffTwo = `The triangle with the biggest area is ${ areaTwo < areaTwo ? 'Triangle Three' : ''} ${ areaTwo > areaTwo ? 'Triangle Four' : ''} ${ areaTwo == areaTwo ? 'none since they are the same size' : ''}.`
 
-var big = " The triangle with the biggest area is "
-var same = " There is no difference in size between the triangles"
+let baseFive ="7.8";
+let heightFive = "5.6";
+let areaFive = `Triangle five area is ${(baseFive * heightFive)* (1/2)} cm2.`
 
-function area(a, b) { 
-  return  ' has an area of ' + (a * b) / 2 + ' cm2';
-}
+let baseSix = "9.3";
+let heightSix = "12.4";
+let areaSix = `Triangle six area is ${(baseSix * heightSix)* (1/2)} cm2.`
 
-document.getElementById("caseOne").innerHTML=
-one + areaOne + " and " + two + areaTwo + "." + big + two + ".";
+const diffThree = `The triangle with the biggest area is ${ areaFive > areaSix ? 'Triangle Five' : ''} ${ areaFive < areaSix ? 'Triangle Six' : ''} ${ areaFive == areaSix ? 'none since they are the same size' : ''}.`
 
-document.getElementById("caseTwo").innerHTML=
-three + " and " + four + areaTwo + " . " + same + ".";
+///////////// case one // 
+document.getElementById("triangleOne").innerHTML = areaOne;
+document.getElementById("triangleTwo").innerHTML = areaTwo;
+document.getElementById("compareOne").innerHTML = diffOne;
+///////////// case two //
+document.getElementById("triangleThreeFour").innerHTML = areaThreeFour;
+document.getElementById("compareTwo").innerHTML = diffTwo;
+///////////// case three //
+document.getElementById("triangleFive").innerHTML = areaFive;
+document.getElementById("triangleSix").innerHTML = areaSix;
+document.getElementById("compareThree").innerHTML = diffThree;
 
-document.getElementById("caseThree").innerHTML=
-five + areaFive + " and " + six + areaSix + "." + big + six + ".";
+
